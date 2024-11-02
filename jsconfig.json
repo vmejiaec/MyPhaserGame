@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "ES6"
+    },
+    "include": [
+        "js/phaser-arcade-physics.min.js",
+        "**/*.js"
+    ]
+}
