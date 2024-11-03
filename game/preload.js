@@ -7,6 +7,7 @@ function preload()
     this.load.image('star','assets/sprites/star.png');
     this.load.image('bomb','assets/sprites/bomb.png');
 
+    // Load the sprite sheet for the character
     this.load.spritesheet(
         'dude',
         'assets/sprites/character/dude.png',
