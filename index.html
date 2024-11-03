@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/phaser-arcade-physics.min.js"></script>
+    <script src="game/config.js"></script>
     <script src="game/preload.js"></script>
     <script src="game/create.js"></script>
     <script src="game/update.js"></script>
@@ -19,26 +20,7 @@
     <br>
 
     <script>
-
-        const config = {
-            type: Phaser.AUTO,
-            width: 800,
-            height: 600,
-            scene: {
-                preload: preload,
-                create: create,
-                update: update
-            },
-            physics:{
-                default: 'arcade',
-                arcade:{
-                    graviy: {
-                        y:200
-                    }
-                }
-            }
-        };
-
+           
         document.getElementById('startGameButton')
             .addEventListener('click', () => {
                 const game = new Phaser.Game(config);
