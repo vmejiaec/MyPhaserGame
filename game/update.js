@@ -1,10 +1,10 @@
 function update(){
     if (cursors.left.isDown){
-        player.setVelocityX(-160);
+        player.setVelocityX(-200);
         player.anims.play('left', true);
     }
     else if (cursors.right.isDown){
-        player.setVelocityX(160);
+        player.setVelocityX(200);
         player.anims.play('right',true);
     }
     else {
@@ -13,6 +13,6 @@ function update(){
     }
 
     if (cursors.up.isDown && player.body.touching.down){
-        player.setVelocityY(-330);
+        player.setVelocityY(-430);
     }
 }
