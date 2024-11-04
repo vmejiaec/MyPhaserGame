@@ -3,6 +3,9 @@ var player;
 var cursors;
 var stars;
 
+var score;
+var scoreText;
+
 function create()
 {
     this.add.image(400,300,'sky');
@@ -79,11 +82,23 @@ function create()
     );
 
     this.physics.add.collider(starts,platforms);
-
     this.physics.add.overlap(player,starts,collectStar,null,this);
+
+    // Score text
+    scoreText = this.add.text(
+        16,16,
+        'score: 0',
+        {
+            fontSize: '32px', 
+            fill: '#000'
+
+        });
 } 
 
 function collectStar(player,star)
 {
     star.disableBody(true,true);
+
+    score += 10;
+    scoreText.setText('Score: ' + score);
 }   
